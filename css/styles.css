@@ -128,3 +128,86 @@ animation:spin 1s linear infinite;
 100%{transform:rotate(360deg)}
 
 }
+
+body.light {
+
+background:#f5f5f5;
+color:#111;
+
+}
+
+/* navbar no modo claro */
+
+body.light .navbar {
+
+background:rgba(255,255,255,0.8);
+
+}
+
+/* links da navbar */
+
+body.light .navbar a {
+
+color:#111;
+
+}
+
+/* cards */
+
+body.light .card {
+
+background:white;
+color:black;
+
+}
+
+/* loader */
+
+body.light #loader {
+
+background:white;
+
+}
+
+#theme-toggle {
+
+cursor:pointer;
+font-size:18px;
+background:none;
+border:none;
+color:white;
+
+}
+
+body.light #theme-toggle{
+
+color:black;
+
+}
+body{
+
+background: linear-gradient(-45deg,#0f172a,#1e293b,#111827,#020617);
+background-size:400% 400%;
+animation:gradient 15s ease infinite;
+
+color:white;
+
+}
+.contact-btn{
+
+background:#111827;
+padding:15px 25px;
+border-radius:10px;
+
+transition:0.3s;
+
+display:inline-block;
+
+}
+
+.contact-btn:hover{
+
+transform:scale(1.08);
+background:#1f2937;
+
+}
