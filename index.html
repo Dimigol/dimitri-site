@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dimitri Jadovski</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="text-white">
+
+<!-- <div id="loader">
+<div class="spinner"></div>
+</div> -->
+
+<nav class="navbar">
+
+<div class="logo">Dimitri</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#projetos">Projetos</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+
+<button id="theme-toggle">🌙</button>
+
+</nav>
+
+<div id="tsparticles"></div>
+
+<section class="h-screen flex flex-col justify-center items-center text-center">
+
+<h1 class="text-5xl font-bold mb-4">
+Dimitri Jadovski
+</h1>
+
+<p class="text-xl text-gray-300 mb-6">
+Estudante de Ciência da Computação • Desenvolvedor
+</p>
+
+<a href="#projetos"
+class="bg-white text-black px-6 py-3 rounded-xl hover:scale-110 transition">
+
+Projetos
+
+</a>
+
+</section>
+
+<section id="projetos" class="py-24 max-w-5xl mx-auto">
+
+<h2 class="text-3xl font-bold mb-10">Projetos</h2>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="card">
+<h3>Agenda Médica</h3>
+<p>Sistema em Java para gerenciamento de consultas.</p>
+</div>
+
+<div class="card">
+<h3>Jogo da Velha</h3>
+<p>Jogo em JavaScript com IA.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="github">
+
+<h2>Projetos GitHub</h2>
+
+<div id="repos"></div>
+
+</section>
+
+<section id="blog">
+
+<h2>Blog</h2>
+
+<div id="posts"></div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<script src="particles.js"></script>
+<script src="theme.js"></script>
+<script src="github.js"></script>
+<script src="blog.js"></script>
+<script src="loader.js"></script>
+
+</body>
+</html>
