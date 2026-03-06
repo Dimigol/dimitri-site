@@ -2,17 +2,24 @@ tsParticles.load("tsparticles",{
 
 particles:{
 
-number:{value:80},
+number:{value:35},
 
-size:{value:2},
+color:{value:"#38bdf8"},
 
-move:{speed:1},
+size:{
+value:{min:2,max:6}
+},
 
-opacity:{value:0.4},
+move:{
+speed:0.4
+},
+
+opacity:{
+value:{min:0.08,max:0.22}
+},
 
 links:{
-enable:true,
-distance:150
+enable:false
 }
 
 }

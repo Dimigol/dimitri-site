@@ -1,19 +1,35 @@
-const toggle = document.getElementById("theme-toggle")
+﻿const themeToggle = document.getElementById("theme-toggle");
+const THEME_KEY = "theme";
 
-if(localStorage.getItem("theme") === "light"){
-document.body.classList.add("light")
+function applyTheme(theme) {
+  const isLight = theme === "light";
+
+  document.body.classList.toggle("light", isLight);
+
+  if (themeToggle) {
+    themeToggle.textContent = isLight ? "Modo escuro" : "Modo claro";
+    themeToggle.setAttribute("aria-label", isLight ? "Ativar modo escuro" : "Ativar modo claro");
+    themeToggle.setAttribute("aria-pressed", String(isLight));
+  }
 }
 
-toggle.addEventListener("click",()=>{
+function getInitialTheme() {
+  const savedTheme = localStorage.getItem(THEME_KEY);
 
-document.body.classList.toggle("light")
+  if (savedTheme === "light" || savedTheme === "dark") {
+    return savedTheme;
+  }
 
-if(document.body.classList.contains("light")){
-localStorage.setItem("theme","light")
-toggle.innerText="☀️"
-}else{
-localStorage.setItem("theme","dark")
-toggle.innerText="🌙"
+  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
 }
 
-})
+if (themeToggle) {
+  applyTheme(getInitialTheme());
+
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.body.classList.contains("light") ? "dark" : "light";
+
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_KEY, nextTheme);
+  });
+}

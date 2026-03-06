@@ -1,31 +1,29 @@
-fetch("https://api.github.com/users/SEUUSUARIO/repos")
+﻿fetch("https://api.github.com/users/dimigol/repos")
+  .then((res) => res.json())
+  .then((data) => {
+    const container = document.getElementById("repos");
 
-.then(res=>res.json())
+    if (!container || !Array.isArray(data)) {
+      return;
+    }
 
-.then(data=>{
-
-const container=document.getElementById("repos")
-
-data.slice(0,6).forEach(repo=>{
-
-container.innerHTML+=`
-
+    data
+      .filter((repo) => !repo.fork)
+      .slice(0, 6)
+      .forEach((repo) => {
+        container.innerHTML += `
 <div class="card">
-
-<h3>${repo.name}</h3>
-
-<p>${repo.description || "Projeto de software"}</p>
-
-<a href="${repo.html_url}" target="_blank">
-
-Ver no GitHub
-
-</a>
-
+  <h3>${repo.name}</h3>
+  <p>${repo.description || "Projeto de software"}</p>
+  <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
 </div>
+`;
+      });
+  })
+  .catch(() => {
+    const container = document.getElementById("repos");
 
-`
-
-})
-
-})
+    if (container) {
+      container.innerHTML = '<p>Não foi possível carregar os repositórios agora.</p>';
+    }
+  });
