@@ -426,3 +426,9 @@ body.light #loader {
     scroll-behavior: auto !important;
   }
 }
+
+#projetos .grid > :last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 400px;
+}
