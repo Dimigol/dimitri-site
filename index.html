@@ -1,259 +1,360 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dimitri Jadovski</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimitri Jadovski — Desenvolvedor Fullstack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+  <div id="cursor"></div>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-
-  <body class="text-white">
-    <div id="loader">
-      <div class="spinner"></div>
+  <!-- ── NAV ── -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">dj<b>.</b>dev</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#process">Processo</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+    <div class="nav-badge">
+      <div class="nav-badge-dot"></div>
+      Disponível
     </div>
+  </nav>
 
-    <nav class="navbar">
-      <div class="logo">Dimitri</div>
-
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-
-      <button id="theme-toggle" aria-label="Ativar modo claro">Modo claro</button>
-    </nav>
-
-    <div id="tsparticles"></div>
-
-    <section class="hero h-screen flex flex-col justify-center items-center text-center">
-      <img
-        src="img/foto-perfil.jpeg"
-        alt="Foto de Dimitri Jadovski"
-        class="profile-image w-36 h-36 rounded-full object-cover border-4 border-white/30 shadow-2xl mb-6"
-      />
-
-      <h1 class="text-5xl font-bold mb-4">Dimitri Jadovski</h1>
-
-      <p class="text-xl text-gray-300 mb-6">Estudante de Ciência da Computação • Desenvolvedor</p>
-
-      <a
-        href="#projetos"
-        class="hero-cta bg-white text-black px-6 py-3 rounded-xl hover:scale-110 transition"
-      >
-        Projetos
-      </a>
-    </section>
-
-    <section id="projetos" class="py-24 max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-12">Projetos</h2>
-
-      <div class="grid md:grid-cols-2 gap-10 justify-items-center">
-        <div class="project-card">
-          <h3>Jogo da Velha</h3>
-
-          <p>Implementação do clássico jogo da velha com diferentes níveis de dificuldade.</p>
-
-          <div class="tech">
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/dimigol/jogo-da-velha"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn"
-            >
-              Código
-            </a>
-
-            <a
-              href="https://dimigol.github.io/Jogo-Da-Velha/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn demo"
-            >
-              Demo
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <h3>RPG GAME</h3>
-
-          <p>Jogo de RPG desenvolvido em Java com mecânicas de batalha e sistema de personagem. Com versão web em .html</p>
-
-          <div class="tech">
-            <span>Java</span>
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/Dimigol/rpg-game"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn"
-            >
-              Código
-            </a>
-
-            <a
-              href="https://dimigol.github.io/rpg-game/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn demo"
-            >
-              Demo
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <h3>Calculadora</h3>
-
-          <p>Implementação de uma calculadora simples com funções básicas.</p>
-
-          <div class="tech">
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/dimigol/calculadora"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn"
-            >
-              Código
-            </a>
-
-            <a
-              href="https://dimigol.github.io/Calculadora/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn demo"
-            >
-              Demo
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <h3>Jogo do Número Secreto</h3>
-
-          <p>Implementação de um jogo simples onde o jogador deve adivinhar um número secreto.</p>
-
-          <div class="tech">
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/dimigol/jogo-do-numero"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn"
-            >
-              Código
-            </a>
-
-            <a
-              href="https://dimigol.github.io/jogo-do-numero/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn demo"
-            >
-              Demo
-            </a>
-          </div>
-        </div>
-        <div class="project-card">
-          <h3>Netflix</h3>
-
-          <p>Clone inspirado na interface da Netflix, com navegação entre páginas, perfis dinâmicos e carrosséis interativos de filmes e séries.</p>
-
-          <div class="tech">
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/Dimigol/Netflix"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn"
-            >
-              Código
-            </a>
-
-            <a
-              href="https://dimigol.github.io/Netflix/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-btn demo"
-            >
-              Demo
-            </a>
-          </div>
-        </div>
-
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-top">
+      <p class="hero-eyebrow">Fullstack Developer &nbsp;<span>·</span>&nbsp; Porto Alegre, BR</p>
+      <h1 class="hero-h1">
+        <span class="row"><span class="row-in">Fullstack developer.</span></span>
+        <span class="row"><span class="row-in">Do banco de dados <em>à interface.</em></span></span>
+      </h1>
+    </div>
+    <div class="hero-bottom">
+      <div>
+        <div class="hero-bottom-label">Especialidade</div>
+        <div class="hero-bottom-val"><strong>JS · Java</strong> · Node · CSS</div>
       </div>
-    </section>
-
-    <section id="blog" class="py-24 text-center">
-      <h2 class="text-4xl font-bold mb-10">Blog</h2>
-      <div id="posts"></div>
-    </section>
-
-    <section id="contato" class="py-24 text-center">
-      <h2 class="text-3xl font-bold mb-10">Contato</h2>
-
-      <p class="mb-8 text-gray-300">Quer conversar sobre tecnologia, projetos ou oportunidades?</p>
-
-      <div class="flex justify-center gap-8 flex-wrap">
-        <a href="mailto:dimitrijadovski@gmail.com" class="contact-btn">Email</a>
-
-        <a href="https://github.com/dimigol" target="_blank" rel="noopener noreferrer" class="contact-btn">
-          GitHub
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/dimitricjadovski/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-btn"
-        >
-          LinkedIn
-        </a>
+      <div>
+        <div class="hero-bottom-label">Formação</div>
+        <div class="hero-bottom-val">Ciência da Computação</div>
       </div>
-    </section>
+      <div>
+        <div class="hero-bottom-label">Modalidade</div>
+        <div class="hero-bottom-val">Remoto <strong>·</strong> Freelance</div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-accent">Ver projetos →</a>
+        <a href="#contact" class="btn-line">Contato</a>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/blog.js"></script>
-    <script src="js/loader.js"></script>
-  </body>
+  <!-- ── TICKER ── -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <div class="ticker-item">JavaScript <span>✦</span></div>
+      <div class="ticker-item">Java <span>✦</span></div>
+      <div class="ticker-item">Node.js <span>✦</span></div>
+      <div class="ticker-item">HTML &amp; CSS <span>✦</span></div>
+      <div class="ticker-item">REST APIs <span>✦</span></div>
+      <div class="ticker-item">Git &amp; GitHub <span>✦</span></div>
+      <div class="ticker-item">DOM API <span>✦</span></div>
+      <div class="ticker-item">OOP <span>✦</span></div>
+      <div class="ticker-item">Algoritmos <span>✦</span></div>
+      <div class="ticker-item">JavaScript <span>✦</span></div>
+      <div class="ticker-item">Java <span>✦</span></div>
+      <div class="ticker-item">Node.js <span>✦</span></div>
+      <div class="ticker-item">HTML &amp; CSS <span>✦</span></div>
+      <div class="ticker-item">REST APIs <span>✦</span></div>
+      <div class="ticker-item">Git &amp; GitHub <span>✦</span></div>
+      <div class="ticker-item">DOM API <span>✦</span></div>
+      <div class="ticker-item">OOP <span>✦</span></div>
+      <div class="ticker-item">Algoritmos <span>✦</span></div>
+    </div>
+  </div>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="s">
+    <div class="s-wrap">
+      <div class="s-header reveal">
+        <span class="s-num">01</span>
+        <h2 class="s-title">Projetos <em>selecionados</em></h2>
+      </div>
+
+      <!-- Featured -->
+      <div class="proj-featured reveal">
+        <div class="proj-screen">
+          <div class="nf-backdrop">
+            <div class="nf-backdrop-grad"></div>
+            <div class="nf-content">
+              <div class="nf-match">98% relevante para você</div>
+              <div class="nf-show-title">Stranger Things</div>
+              <div class="nf-meta-row">2022 &nbsp;·&nbsp; 4 temporadas &nbsp;·&nbsp; 18+</div>
+              <div class="nf-synopsis">Quando um garoto desaparece, uma cidade descobre experimentos secretos e criaturas vindas de outra dimensão.</div>
+              <div class="nf-actions">
+                <div class="nf-btn-w">▶ Assistir</div>
+                <div class="nf-btn-g">ℹ Mais infos</div>
+              </div>
+            </div>
+          </div>
+          <div class="nf-chrome">
+            <div class="nf-wordmark">STREAMIX</div>
+            <div class="nf-chrome-links">
+              <span class="nf-chrome-link on">Início</span>
+              <span class="nf-chrome-link">Séries</span>
+              <span class="nf-chrome-link">Filmes</span>
+              <span class="nf-chrome-link">Minha lista</span>
+            </div>
+          </div>
+          <div class="nf-row-area">
+            <div class="nf-row-label">Continue assistindo</div>
+            <div class="nf-row-cards">
+              <div class="nf-rcard c-st active"><div class="nf-rcard-label">S. Things</div></div>
+              <div class="nf-rcard c-dk"><div class="nf-rcard-label">Dark</div></div>
+              <div class="nf-rcard c-wt"><div class="nf-rcard-label">Witcher</div></div>
+              <div class="nf-rcard c-sq"><div class="nf-rcard-label">Squid Game</div></div>
+              <div class="nf-rcard c-oz"><div class="nf-rcard-label">Ozark</div></div>
+              <div class="nf-rcard c-pb"><div class="nf-rcard-label">Peaky</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-info">
+          <div>
+            <div class="proj-tags">
+              <span class="proj-tag hi">Destaque</span>
+              <span class="proj-tag">JavaScript</span>
+              <span class="proj-tag">HTML</span>
+              <span class="proj-tag">CSS</span>
+              <span class="proj-tag">DOM API</span>
+            </div>
+            <h3 class="proj-name">Netflix UI —<br><em>Componentes Complexos</em></h3>
+            <p class="proj-desc">Reconstrução da interface da Netflix com foco em performance. O desafio real não foi "fazer parecer igual" — foi gerenciar estado de carrossel com lazy loading sem degradar o scroll.</p>
+            <div class="proj-decision">
+              <div class="proj-decision-label">Decisão técnica</div>
+              <div class="proj-decision-text">Intersection Observer API no lugar de scroll event listeners. Callbacks só quando necessário, zero re-renders desnecessários.</div>
+            </div>
+          </div>
+          <div class="proj-footer">
+            <div class="proj-stats">
+              <div>
+                <div class="proj-stat-num">~40%</div>
+                <div class="proj-stat-label">menos re-renders</div>
+              </div>
+              <div>
+                <div class="proj-stat-num">5</div>
+                <div class="proj-stat-label">componentes</div>
+              </div>
+            </div>
+            <div class="proj-links">
+              <a href="https://dimigol.github.io/Netflix/" target="_blank" class="proj-link hi">Demo →</a>
+              <a href="https://github.com/Dimigol/Netflix" target="_blank" class="proj-link">Código</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary grid -->
+      <div class="proj-grid">
+        <div class="proj-cell reveal">
+          <span class="proj-cell-num">02 — Java · JavaScript · HTML</span>
+          <h3 class="proj-cell-name">RPG Game</h3>
+          <p class="proj-cell-desc">Sistema de RPG com mecânicas de batalha e progressão de personagem. Iniciado em Java puro e portado para web — o que forçou uma reflexão real sobre separação entre lógica de domínio e apresentação.</p>
+          <div class="proj-cell-insight"><b>Aprendizado:</b> a mesma lógica se comporta diferente em ambientes síncronos (Java) vs assíncronos (browser).</div>
+          <div class="proj-cell-links">
+            <a href="https://dimigol.github.io/rpg-game/" target="_blank" class="proj-cell-link hi">Demo →</a>
+            <a href="https://github.com/Dimigol/rpg-game" target="_blank" class="proj-cell-link">Código</a>
+          </div>
+        </div>
+        <div class="proj-cell reveal d1">
+          <span class="proj-cell-num">03 — JavaScript · Algoritmos</span>
+          <h3 class="proj-cell-name">Jogo da Velha — Minimax</h3>
+          <p class="proj-cell-desc">Múltiplos níveis de dificuldade. O modo difícil usa o algoritmo Minimax — tornando o projeto uma exploração prática de recursão e árvores de decisão, não apenas "um joguinho".</p>
+          <div class="proj-cell-insight"><b>Decisão técnica:</b> alpha-beta pruning para otimizar a árvore de busca sem impactar a experiência do usuário.</div>
+          <div class="proj-cell-links">
+            <a href="https://dimigol.github.io/Jogo-Da-Velha/" target="_blank" class="proj-cell-link hi">Demo →</a>
+            <a href="https://github.com/dimigol/jogo-da-velha" target="_blank" class="proj-cell-link">Código</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experiments -->
+      <div class="exp-row reveal">
+        <span class="exp-label">Experimentos</span>
+        <div class="exp-items">
+          <a href="https://github.com/dimigol/calculadora" target="_blank" class="exp-item">Calculadora</a>
+          <a href="https://github.com/dimigol/jogo-do-numero" target="_blank" class="exp-item">Número Secreto</a>
+          <a href="https://github.com/dimigol" target="_blank" class="exp-item">GitHub →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROCESS ── -->
+  <section id="process" class="s">
+    <div class="s-wrap">
+      <div class="s-header reveal">
+        <span class="s-num">02</span>
+        <h2 class="s-title">Como <em>penso</em></h2>
+      </div>
+
+      <div class="process-grid reveal">
+        <div class="process-cell">
+          <span class="process-n">01</span>
+          <h3 class="process-cell-title">Entender antes de implementar</h3>
+          <p class="process-cell-text">Antes de abrir o editor, preciso entender o contexto. Quem usa? Com que frequência? O que acontece quando falha? Essas respostas definem a arquitetura — não o tutorial mais recente.</p>
+        </div>
+        <div class="process-cell">
+          <span class="process-n">02</span>
+          <h3 class="process-cell-title">Performance é feature</h3>
+          <p class="process-cell-text">Uma interface que trava não é "funcional com um bug" — é uma interface quebrada. Considero performance desde a decisão de arquitetura, não como otimização posterior.</p>
+        </div>
+        <div class="process-cell">
+          <span class="process-n">03</span>
+          <h3 class="process-cell-title">Código que outros conseguem manter</h3>
+          <p class="process-cell-text">O código que escrevo hoje vai ser lido em 6 meses. Nomeação clara, funções com responsabilidade única, comentários que explicam o porquê — não o quê.</p>
+        </div>
+        <div class="process-cell">
+          <span class="process-n">04</span>
+          <h3 class="process-cell-title">Complexidade tem custo</h3>
+          <p class="process-cell-text">Cada abstração precisa ser justificada. Se um array com filter resolve, não vou inventar um design pattern. A melhor solução é a mais simples que funciona de verdade.</p>
+        </div>
+      </div>
+
+      <div class="code-wrap reveal">
+        <div class="code-titlebar">
+          <div class="code-dot" style="background:#ff5f56"></div>
+          <div class="code-dot" style="background:#ffbd2e"></div>
+          <div class="code-dot" style="background:#27c93f"></div>
+          <span class="code-filename">carousel.js</span>
+        </div>
+        <div class="code-body">
+<pre><span class="cm">// scroll event → dispara centenas de vezes por segundo</span>
+<span class="cm">// window.addEventListener('scroll', check)  ← evitado</span>
+
+<span class="cm">// Intersection Observer → callback só quando necessário</span>
+<span class="kw">const</span> <span class="fn">observer</span> = <span class="kw">new</span> <span class="fn">IntersectionObserver</span>((entries) => {
+  entries.<span class="fn">forEach</span>((entry) => {
+    <span class="kw">if</span> (entry.isIntersecting) {
+      <span class="fn">loadContent</span>(entry.target);
+      observer.<span class="fn">unobserve</span>(entry.target); <span class="cm">// para após carregar</span>
+    }
+  });
+}, { threshold: <span class="num">0.1</span>, rootMargin: <span class="str">'50px'</span> });
+
+carouselItems.<span class="fn">forEach</span>(item => observer.<span class="fn">observe</span>(item));</pre>
+        </div>
+        <div class="code-note">
+          <span class="code-note-tag">nota →</span>
+          <p class="code-note-text">rootMargin: '50px' pré-carrega antes de ficar visível, eliminando flash de conteúdo vazio em scroll rápido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="s">
+    <div class="s-wrap">
+      <div class="s-header reveal">
+        <span class="s-num">03</span>
+        <h2 class="s-title">Sobre</h2>
+      </div>
+      <div class="about-layout">
+        <div class="reveal">
+          <h3 class="about-title">Desenvolvedor <em>fullstack</em><br>focado em produto.</h3>
+          <div class="about-text">
+            <p>Foco em aplicações web que precisam de <strong>performance, clareza de código e manutenibilidade</strong>. Estudando Ciência da Computação, mas meu aprendizado acontece principalmente construindo coisas reais e investigando por que elas falham.</p>
+            <p>Gosto de projetos onde solução técnica e experiência do usuário são inseparáveis — onde uma decisão de arquitetura impacta diretamente o que a pessoa sente ao usar o produto.</p>
+            <p>Atualmente aprofundando <strong>Node.js, arquiteturas REST</strong> e boas práticas de engenharia. Disponível para freelance e oportunidades remotas.</p>
+          </div>
+        </div>
+        <div class="reveal d1">
+          <div class="sidebar-section">
+            <div class="sidebar-lbl">Stack</div>
+            <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Java</span><div class="skill-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
+            <div class="skill-row"><span class="skill-name">HTML &amp; CSS</span><div class="skill-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Node.js</span><div class="skill-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Git</span><div class="skill-pips"><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip on"></div><div class="pip"></div></div></div>
+          </div>
+          <div class="sidebar-section">
+            <div class="sidebar-lbl">Agora</div>
+            <p class="sidebar-text">Aprofundando Node.js e arquiteturas REST. Explorando design de sistemas e engenharia de software.</p>
+          </div>
+          <div class="sidebar-section">
+            <div class="sidebar-lbl">Formação</div>
+            <p class="sidebar-text">Ciência da Computação — em andamento</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="s">
+    <div class="s-wrap">
+      <div class="s-header reveal">
+        <span class="s-num">04</span>
+        <h2 class="s-title">Contato</h2>
+      </div>
+      <div class="contact-layout">
+        <div class="reveal">
+          <h3 class="contact-title">Tem um problema<br>técnico para <em>resolver?</em></h3>
+          <p class="contact-sub">Me conta o contexto — o que você está construindo, onde está travado, ou qual oportunidade está avaliando. Respondo em até 24h.</p>
+          <div class="contact-list">
+            <a href="mailto:dimitrijadovski@gmail.com" class="contact-item">
+              <div class="contact-item-meta">
+                <span class="contact-item-lbl">Email</span>
+                <span class="contact-item-val">dimitrijadovski@gmail.com</span>
+              </div>
+              <span class="contact-item-arr">↗</span>
+            </a>
+            <a href="https://github.com/dimigol" target="_blank" class="contact-item">
+              <div class="contact-item-meta">
+                <span class="contact-item-lbl">GitHub</span>
+                <span class="contact-item-val">github.com/dimigol</span>
+              </div>
+              <span class="contact-item-arr">↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/dimitricjadovski/" target="_blank" class="contact-item">
+              <div class="contact-item-meta">
+                <span class="contact-item-lbl">LinkedIn</span>
+                <span class="contact-item-val">dimitricjadovski</span>
+              </div>
+              <span class="contact-item-arr">↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="manifesto reveal d1">
+          <div class="manifesto-head">O que acredito</div>
+          <div class="manifesto-item">Código bom é código que outra pessoa entende em 6 meses.</div>
+          <div class="manifesto-item">Performance não é otimização — é decisão de arquitetura.</div>
+          <div class="manifesto-item">A melhor solução raramente é a mais complexa.</div>
+          <div class="manifesto-item">Entender o problema é metade da solução.</div>
+          <div class="manifesto-item">Bugs interessantes ensinam mais que tutoriais.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-copy">© 2025 Dimitri Jadovski</span>
+    <div class="footer-links">
+      <a href="mailto:dimitrijadovski@gmail.com" class="footer-link">Email</a>
+      <a href="https://github.com/dimigol" target="_blank" class="footer-link">GitHub</a>
+      <a href="https://www.linkedin.com/in/dimitricjadovski/" target="_blank" class="footer-link">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
